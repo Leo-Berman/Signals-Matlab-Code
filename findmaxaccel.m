@@ -1,7 +1,7 @@
 % Leo Berman
 % 10/10/2023
 % usage: max variable = findmaxaccel(input your transfer function, input your t
-% domain input
+% domain input,input your title as 'title')
 function[maxim]=findmaxaccel(transfunc,input,string)
     syms t
     % 10 second linspace
