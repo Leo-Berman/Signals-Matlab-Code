@@ -13,4 +13,6 @@ function[]=getfreqresp(transfunc,string)
     % plots the bode diagram
     bode(Hs_fromtf); 
     title(string)
+    hold off
+    snapnow
 end
