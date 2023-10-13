@@ -2,7 +2,7 @@
 % 10/10/2023
 % usage: getfreqresp(input your transfer function, input your title as
 % 'title'
-function[]=getfreqresp(transfunc,string)
+function[peakmag]=getfreqresp(transfunc,string,freqs)
     
     % getting the transfer function
     [n, d]=numden(transfunc);
@@ -15,4 +15,10 @@ function[]=getfreqresp(transfunc,string)
     title(string)
     hold off
     snapnow
+
+    %
+    [mags,frequencies,wout]= bode(Hs_fromtf,freqs)
+    peakmag=max(abs(mags));
+
+
 end
