@@ -17,7 +17,7 @@ function[peakmag]=getfreqresp(transfunc,string,freqs)
     snapnow
 
     %
-    [mags,frequencies,wout]= bode(Hs_fromtf,freqs)
+    [mags,frequencies,wout]= bode(Hs_fromtf,freqs);
     peakmag=max(abs(mags));
 
 
