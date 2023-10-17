@@ -18,7 +18,7 @@ function[maxim]=findmaxaccel(transfunc,in,string)
     % Plots the input velocities as well as acceleration
     fplot(out,[0,5])
     hold on;
-    fplot(input,[0 5]);
+    fplot(in,[0 5]);
     hold on;
     fplot(accel,[0 5]);
     hold on;
