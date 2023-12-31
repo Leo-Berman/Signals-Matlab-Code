@@ -31,4 +31,4 @@ f = fs*(0:nfft-1)/nfft - (fs/nfft)*floor(nfft/2);
 
 if nargout >= 1, varargout{1} = X; end %If at least one output exists, make the first output the FT of x, X
 if nargout >= 2, varargout{2} = f; end %If at least two outputs exist, make the second the frequency, f
-if nargout == 0, plot(f(f>=0),abs(X(f>=0))); xlabel('Frequency (Hz)'); end %If no outputs exist, plot the frequency vs. X 
+if nargout == 0, plot(f(f>=0),abs(X(f>=0)));ylabel('Amplitude'); xlabel('Frequency (Hz)'); end %If no outputs exist, plot the frequency vs. X 
